@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/health",
+      "destination": "/api/health.js"
+    },
+    {
+      "source": "/api/bingx/:path*",
+      "destination": "/api/bingx.js"
+    },
+    {
+      "source": "/api/bingx",
+      "destination": "/api/bingx.js"
+    },
+    {
+      "source": "/api/bitget/:path*",
+      "destination": "/api/bitget.js"
+    },
+    {
+      "source": "/api/bitget",
+      "destination": "/api/bitget.js"
+    },
+    {
+      "source": "/api/mexc/:path*",
+      "destination": "/api/mexc.js"
+    },
+    {
+      "source": "/api/mexc",
+      "destination": "/api/mexc.js"
+    },
+    {
+      "source": "/api/lbank/:path*",
+      "destination": "/api/lbank.js"
+    },
+    {
+      "source": "/api/lbank",
+      "destination": "/api/lbank.js"
+    },
+    {
+      "source": "/api/bitunix/:path*",
+      "destination": "/api/bitunix.js"
+    },
+    {
+      "source": "/api/bitunix",
+      "destination": "/api/bitunix.js"
+    },
+    {
+      "source": "/api/news-proxy",
+      "destination": "/api/news-proxy.js"
+    },
+    {
+      "source": "/api/credentials",
+      "destination": "/api/credentials.js"
+    },
+    {
+      "source": "/api/operations",
+      "destination": "/api/operations.js"
+    },
+    {
+      "source": "/app",
+      "destination": "/platform.html"
+    },
+    {
+      "source": "/",
+      "destination": "/platform.html"
+    }
+  ]
+}
